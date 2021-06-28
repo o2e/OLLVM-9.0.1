@@ -17,7 +17,3 @@ jobs:
       run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DLLVM_CREATE_XCODE_TOOLCHAIN=ON
     - name: make
       run: cmake -B ${{github.workspace}}/build
-    - name: make check
-      run: cmake -B ${{github.workspace}}/build check
-    - name: make distcheck
-      run: cmake -B ${{github.workspace}}/build distcheck
