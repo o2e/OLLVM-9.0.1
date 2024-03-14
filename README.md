@@ -13,7 +13,7 @@ make -j8 #8是你的CPU线程数量 比如8核16线程可以写 -j16
                 
 + 打开路径 `OLLVM-9.0.1/build/bin/` 找到 `clang-9` `clang` `clang-format` `clang++` 四个文件
 + 复制替换文件到ndk里面去 `/Users/用户名/Library/Android/sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/darwin-x86_64/bin/`
-+ 最后一步复制对应的头文件到NDK目录下(不然Android项目编译会报错找不到`stdarg`等头文件错误)，进入刚刚编译的build目录`OLLVM-9.0.1/build/lib/clang/9.0.1/include/`，然后复制如下文件`stdarg.h`、`stddef.h`、`__stddef_max_align_t.h`、`float.h`到 `/Users/用户名/Library/Android/sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include` 文件夹下就彻底大功告成了。
++ 最后一步复制对应的头文件到NDK目录下(不然Android项目编译会报错找不到`stdarg`等头文件错误)，进入刚刚编译的build目录`OLLVM-9.0.1/build/lib/clang/9.0.1/include/`，然后复制如下文件`stdarg.h`、`stddef.h`、`__stddef_max_align_t.h`、`float.h`、`stdbool.h`到 `/Users/用户名/Library/Android/sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include` 文件夹下就彻底大功告成了。
 + 注意上面的路径是macOS系统的 系统不一样 安装路径和`darwin-x86_64`的名字也会不同
 
 #### 注意事项
